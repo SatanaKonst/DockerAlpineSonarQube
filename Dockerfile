@@ -4,4 +4,5 @@ RUN apk update && apk upgrade && \
 RUN wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.0.2311.zip && \
     unzip sonar-scanner-cli-4.6.0.2311.zip && \
     mv sonar-scanner-4.6.0.2311 /opt/sonar-scanner && \
-    export PATH="$PATH:/opt/sonar-scanner/bin"
+    rm -rf sonar-scanner-cli-4.6.0.2311.zip && \
+    ln -s /opt/sonar-scanner/bin/sonar-scanner /bin/sonar-scaner
