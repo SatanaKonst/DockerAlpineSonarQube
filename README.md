@@ -11,3 +11,8 @@
 6. openjdk11-jre 
 7. unzip 
 8. wget
+
+# Автоматическая сборка образа
+```shell
+chmod +x ./autobuild.sh && ./autobuild.sh [-s] -l login -p password
+```
